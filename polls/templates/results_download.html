@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+  <div class="pull-left" style="height:40px"></div>
+</div>
+
+<hr>
+<div class="container">
+  <div class="alert alert-info" role="alert">
+    <h2 class="text-center text-uppercase">{{page_heading}}</h2>
+    
+  </div>
+  <hr>
+  <!-- Tables showing the results for each category -->
+</div>
+<!-- President Category -->
+<div class="container">
+  <div class="container">
+    <h4 class="page-header text-center">
+      Category: President
+    </h4>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+    <tr>
+      <th>Contestant</th>
+      <th>Matric Number</th>
+      <th>Number of Votes</th>
+    </tr>
+    {% for a in list %}
+    {% if a.category == "President" %}
+    <tr class="danger">
+      <td>{{a.name}}</td>
+      <td>{{a.reg_number}}</td>
+      <td>{{a.votes}}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+  </table>
+  </div>
+</div>
+<!-- Vice President Category -->
+<div class="container">
+  <div class="container">
+    <h4 class="page-header text-center">
+      Category: Vice President
+    </h4>
+  <table class="table table-striped table-bordered table-hover table-condensed">
+    <tr>
+      <th>Contestant</th>
+      <th>Matric Number</th>
+      <th>Number of Votes</th>
+    </tr>
+    {% for a in list %}
+    {% if a.category == "Vice President" %}
+    <tr class="danger">
+      <td>{{a.name}}</td>
+      <td>{{a.reg_number}}</td>
+      <td>{{a.votes}}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+  </table>
+</div>
+</div>
+
+<!-- General Secretary Category -->
+<div class="container">
+  <div class="container">
+    <h4 class="page-header text-center">
+      Category: General Secretary
+    </h4>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+      <tr>
+        <th>Contestant</th>
+        <th>Matric Number</th>
+        <th>Number of Votes</th>
+      </tr>
+      {% for a in list %}
+      {% if a.category == "General Secretary" %}
+      <tr class="danger">
+        <td>{{a.name}}</td>
+        <td>{{a.reg_number}}</td>
+        <td>{{a.votes}}</td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<!-- Assistant General Secretary Category -->
+<div class="container">
+  <div class="container">
+    <h4 class="page-header text-center">
+      Category: Assistant General Secretary
+    </h4>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+      <tr>
+        <th>Contestant</th>
+        <th>Matric Number</th>
+        <th>Number of Votes</th>
+      </tr>
+      {% for a in list %}
+      {% if a.category == "Assistant General Secretary" %}
+      <tr class="danger">
+        <td>{{a.name}}</td>
+        <td>{{a.reg_number}}</td>
+        <td>{{a.votes}}</td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+  </div>
+</div>
+<!-- Treasurer Category -->
+<div class="container">
+  <div class="container">
+    <h4 class="page-header text-center">
+      Category: Treasurer
+    </h4>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+      <tr>
+        <th>Contestant</th>
+        <th>Matric Number</th>
+        <th>Number of Votes</th>
+      </tr>
+      {% for a in list %}
+      {% if a.category == "Treasurer" %}
+      <tr class="danger">
+        <td>{{a.name}}</td>
+        <td>{{a.reg_number}}</td>
+        <td>{{a.votes}}</td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<!-- Financial Secretary -->
+<div class="container">
+  <div class="container">
+    <h4 class="page-header text-center">
+      Category: Financial Secretary
+    </h4>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+      <tr>
+        <th>Contestant</th>
+        <th>Matric Number</th>
+        <th>Number of Votes</th>
+      </tr>
+      {% for a in list %}
+      {% if a.category == "Financial Secretary" %}
+      <tr class="danger">
+        <td>{{a.name}}</td>
+        <td>{{a.reg_number}}</td>
+        <td>{{a.votes}}</td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<!-- Librarian -->
+<div class="container">
+  <div class="container">
+    <h4 class="page-header text-center">
+      Category: Librarian
+    </h4>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+      <tr>
+        <th>Contestant</th>
+        <th>Matric Number</th>
+        <th>Number of Votes</th>
+      </tr>
+      {% for a in list %}
+      {% if a.category == "Librarian" %}
+      <tr class="danger">
+        <td>{{a.name}}</td>
+        <td>{{a.reg_number}}</td>
+        <td>{{a.votes}}</td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<!-- Sports Director -->
+<div class="container">
+  <div class="container">
+    <h4 class="page-header text-center">
+      Category: Sports Director
+    </h4>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+      <tr>
+        <th>Contestant</th>
+        <th>Matric Number</th>
+        <th>Number of Votes</th>
+      </tr>
+      {% for a in list %}
+      {% if a.category == "Sports Director" %}
+      <tr class="danger">
+        <td>{{a.name}}</td>
+        <td>{{a.reg_number}}</td>
+        <td>{{a.votes}}</td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<!-- P.R.O -->
+<div class="container">
+  <div class="container">
+    <h4 class="page-header text-center">
+      Category: P.R.O
+    </h4>
+    <table class="table table-striped table-bordered table-hover table-condensed">
+      <tr>
+        <th>Contestant</th>
+        <th>Matric Number</th>
+        <th>Number of Votes</th>
+      </tr>
+      {% for a in list %}
+      {% if a.category == "P.R.O" %}
+      <tr class="danger">
+        <td>{{a.name}}</td>
+        <td>{{a.reg_number}}</td>
+        <td>{{a.votes}}</td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+
+<hr>
+
+{% endblock %}

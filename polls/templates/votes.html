@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- <h1>{{ department_name }} General Elections</h1> -->
+<h3>{{section}} Category</h3>
+
+{% for item in contestant_list %}
+  <ul>
+    <li>{{item.name}}</li>
+  </ul>
+
+{% endfor %}
+
+{% endblock %}

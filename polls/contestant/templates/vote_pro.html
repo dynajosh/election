@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="" style="height:40px"></div>
+<hr>
+
+
+
+<div class="container">
+    <div class="alert alert-info" role="alert">
+        <h2 class="text-center text-uppercase">{{section}}</h2>
+    </div>
+    <hr>
+</div>
+<div class="row">
+    {% for a in list %}
+        {% if a.category == "P.R.O" %}
+                <div class="col-12 col-md-4 mx-auto">
+                    <div class="card bg-light text-dark">
+                        <div class="card-body">
+                            <img src="{{a.image.url}}" alt="picture suppose dey here" class="card-img-top">                           
+                            <h5 class="card-title">{{a.name}} </h5>
+                            <p class="card-text">{{a.level}}</p> 
+                        </div>
+                    </div>
+                </div>
+        {% endif %}
+    {% endfor %}
+</div>
+<hr>
+
+<form action="/vote/sportsdirector" method="POST">  {% csrf_token %}
+    <div class="row">
+        <div class="col-4 text-center">
+            <h4><label for="s_box1"><input type="radio" name="vote" value="seller" id="s_box1">Vote</label></h4>
+        </div>
+        <div class="col-4 text-center">
+            <h4><label for="b_box2"><input type="radio" name="vote" value="buyer" id="b_box2">Vote</label></h4>
+        </div>
+        <div class="col-4 text-center">
+            <h4><label for="b_box3"><input type="radio" name="vote" value="buyer" id="b_box3">Vote</label></h4>
+        </div>
+    <!-- <button type="submit" class="">Submit</button> -->
+        
+    </div>
+
+<hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-9" >
+                <div class="progress">
+                    <div class="progress-bar progress-bar-primary progress-bar-striped active" style="width: 99%" padding-bottom="10px">
+                        99%
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 text-right">
+                <a href="#">
+                    <button type="submit" class="btn btn-warning">Next</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
