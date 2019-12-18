@@ -1,2 +1,2 @@
 # election
- Electronic voting electio for colleges
+ Electronic voting system for colleges
